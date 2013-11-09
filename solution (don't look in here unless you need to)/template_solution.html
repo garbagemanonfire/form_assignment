@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The xml tag is one way we define the type of code and character set we will be using. -->
+
+
+<!-- The doctype declares the type of coding the HTML page uses so that the browser knows how to render it. -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!-- The  html tag contains everything on the page: head and body-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <!-- The "head" container includes all the information the browser needs to display the page -->
+  <head>
+    <!-- the "meta" tag is used to provide, ah, meta-information about the page. 
+         This one is another method to the browser what this content is and what character set we are using 
+    -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- edit the title to include your name and make it in possesive case (http://englishplus.com/grammar/00000364.htm) -->
+    <title>Form Assignment 1</title>
+    
+    <!-- The "link" tag identifies your external CSS style sheet. Edit this link to use your particular file  -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/form_assignment.css" /> 
+    
+    <!-- the "style" tag container includes this page's unique style rules -->
+    <style type="text/css">
+      
+      h1 {font-size: 36px;}
+      .prompt_text {
+        font-size: 24px;
+        padding-left: 10px;
+        color: #000;
+      }
+      .form_field_table {
+        margin-left: 30px;
+        border: none;
+      }
+      .form_field_table td {color: #00f;}
+      form {
+        color: #00f;
+      }
+      .buttons {
+        width: 600px;
+        float: right;
+        padding: 20px;
+      }
+      .footer {
+        clear: both;
+      }
+      input {margin-left: 20px;}
+      textarea {margin-left: 20px;}
+
+    </style>
+  </head>
+
+  <!-- The "body" tag container includes the structure and content of the page -->
+  <body>
+
+    <div class="container"> <!-- contains everything on the page; used for centering and margins-->
+
+      <div class="header"> <!-- contains the constant stuff at the top of the page -->
+        <div class="validation_badge">
+
+        <!-- replace this html with the html snippets that displays your validation badges. -->
+    <p>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+          src="http://jigsaw.w3.org/css-validator/images/vcss"
+          alt="Valid CSS!" />
+      </a>
+    </p>
+        <!-- Notice that the indentation style of the second segment of code is all on one line. Which one is more readable for you? -->
+        <p>
+      <a href="http://validator.w3.org/check?uri=referer"><img
+        src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" height="31" width="88" /></a>
+      </p>
+  
+      </div>
+    </div>
+      <div class="page_heading">
+
+        <h1>Feedback</h1>
+      </div>
+
+
+
+        <!-- modify the form tag to work properly with the CGI script -->
+        <form method="post" action="http:form-echo.herokuapps.com/form-echo">
+          <input type="hidden" name="subject" value="Customer Feedback" />
+
+          <p class="prompt_text">Thank you for using our product. Please give us feedback.</p>
+
+          <!-- put the first three fields here. Use a table to make alignment easier -->
+          <table class="form_field_table">
+            <tr>
+              <td width="29%">Your email:</td>
+              <td width="71%">
+                <input type="text"  name="recipient" value="me@example.com" size="40" />
+              </td>
+            </tr>
+            <tr>
+              <td width="29%">Your name: </td>
+              <td width="71%">
+                <input type="text" name="customer_name" size="40" />
+              </td>
+            </tr>
+            <tr>
+              <td width="29%">Your phone:</td>
+              <td width="71%">
+                <input type="text" name="customer_phone" size="40" />
+              </td>
+            </tr>
+            </table>
+            
+            <p class="prompt_text">What sort of feedback do you want to give us?</p>
+
+            <!-- put the radio button fields here. -->
+
+            <input type="radio" name="feedback_type" value="problem"  />&nbsp; I found a problem<br />
+            <input type="radio" name="feedback_type" value="negative" />&nbsp; I wanted to give negative feedback<br />
+            <input type="radio" name="feedback_type" value="positive" checked="checked" />&nbsp; I wanted to give positive feedback<br />
+
+            <p class="prompt_text">How would you like us to respond?</p>
+
+            <!-- put the checkbox fields here. -->
+
+            <input type="checkbox" name="response_type"  value="phone" />&nbsp; Call me<br />
+            <input type="checkbox" name="response_type"  value="email" checked="checked" />&nbsp; Send me email
+
+            <p class="prompt_text">What is your message?</p>
+
+            <!-- put the textarea field here. -->
+
+            <textarea name="customer_message" rows="7" cols="70"> </textarea>
+            
+            <p class="prompt_text">Please give us your zip code: 
+                <span style="margin-left:100px;" >
+                  <input type="text" name="customer_zip_code" size="10" />
+                </span>
+            </p>
+
+            <div class="buttons">
+              <a href="http://www.google.com">Never mind</a>  <input name="submit" type="submit" value="Send us feedback" />
+            </div>
+
+              
+        </form>
+
+
+
+      <!-- the footer area sits at the bottom of the page under the form. -->
+
+      <div class="footer">
+        <!-- edit the footer to include your name  -->
+       Copyright &copy; 2013 <i>Student Name</i>
+      </div>
+    </div>  <!-- .container -->
+
+
+  </body>
+</html>
