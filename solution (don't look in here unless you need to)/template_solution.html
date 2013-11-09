@@ -85,7 +85,7 @@
 
 
         <!-- modify the form tag to work properly with the CGI script -->
-        <form method="post" action="http:form-echo.herokuapps.com/form-echo">
+        <form method="post" action="http:form-echo.herokuapp.com/form-echo">
           <input type="hidden" name="subject" value="Customer Feedback" />
 
           <p class="prompt_text">Thank you for using our product. Please give us feedback.</p>
@@ -132,10 +132,10 @@
             <!-- put the textarea field here. -->
 
             <textarea name="customer_message" rows="7" cols="70"> </textarea>
-            
+
             <p class="prompt_text">Please give us your zip code: 
                 <span style="margin-left:100px;" >
-                  <input type="text" name="customer_zip_code" size="10" />
+                  <input id="customer_zip_code" type="text" name="customer_zip_code" size="10" />
                 </span>
             </p>
 

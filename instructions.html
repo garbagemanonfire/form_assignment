@@ -69,21 +69,16 @@
           </p>
         </div> 
       </div>
-      <div class="page_heading">
+
         <h1>Instructions</h1>
-      </div>
 
 
 
+<p>You will create a web-based feedback form. This feedback form will gather information from the customer using a simple form and submit it to an online Common Gateway Interface (CGI) script.</p>
 
+<h2>References</h2>
 
-
-
-
-
-
-
-<p>You will create a web-based feedback form in this part of assignment 10. This feedback form will gather information from the customer using a simple form and submit it to an online Common Gateway Interface (CGI) script.</p>
+<p>Refer to w3schools.com for <a href="http://www.w3schools.com/html/html_forms.asp">information about forms and tags.</a> The template is in XHTML. Your solution can be in either XHTML or HTML5, but make sure you create a valid DOCTYPE and head elements if you change it to HTML5.</p>
 
 
 <h2>Page Design</h2>
@@ -93,7 +88,7 @@
 
 <p>Note that the title is 36 point font, the prompt text is 24 pt, and everything else is 16pt.&nbsp;The font for the field labels should be dark blue. All other fonts should be black. The font family is not specified. You may apply any other styling as you see fit, as long as the form remains usable.&nbsp;</p>
 <p><strong>Main text fields</strong></p>
-<p>The main <strong>text fields</strong> of the form are the e-mail, name, and phone number of the customer. The email and name fields should be large enough to enter a long string, but the phone field can be smaller. The e-mail field should have a default value in the text box that indicates the legal addresses that are permitted (PCC only). The e-mail field must be named in accordance with the CGI script instructions. See below.</p>
+<p>The main <strong>text fields</strong> of the form are the e-mail, name, and phone number of the customer. The email and name fields should be large enough to enter a long string, but the phone field can be smaller. The e-mail field should have a default value in the text box that indicates the legal addresses that are permitted.</p>
 <p><strong>Radio buttons</strong></p>
 <p>The<strong> radio buttons</strong> allow the customer to select the type of feedback they want to give us. The radio buttons should submit a single attribute whose name is feedback_type and whose value is one of the following three values: "problem", "negative", or "positive".</p>
 <p><strong>Checkboxes&nbsp;</strong></p>
@@ -103,11 +98,15 @@
 <p><strong>Submit button&nbsp;</strong></p>
 <p>The <strong>submit button</strong> should have the text &ldquo;Send us feedback&rdquo; regardless of the name of the button in your code.&nbsp;</p>
 <p>Notice that the bottom of the form has a <strong>cancel link</strong>. This link should go back to your journal.</p>
-<p><strong>Validation</strong></p>
+
 
 
 <h2>Using Form Echo script&nbsp;</h2>
-<p>This assignment requires you to use a specific "CGI" script.</p>
+<p>This assignment requires you to use a specific "CGI" script. This is a simple ruby sinatra script running at <strong>http://form-echo.herokuapp.com</strong>  You need to point your form to the params hash processor by using the following action:</p>
+
+<code>
+  action="http:form-echo.herokuapp.com/form-echo">
+</code>
 
 <h2>Example</h2>
 <p>Here's one possible solution created from the template. Note the badges, the fields, the styling, the scrolling text area, and the button at the bottom of the form.</p>
@@ -117,18 +116,18 @@
 <p><img src="images/example-results-small.png" alt="Example submittal results" title="Example submittal results" /></p>
 <p></p>
 <h2>Specific instructions</h2>
-<ol>
 
-<li>Read the instructions in the file comments carefully. You will be instructed to add your name and do other things. There are places in the file reserved for where you add form controls.<br /><br />In particular:</li>
 <ol>
+  <li>Fork the portland code school "form-assignment" repo</li>
+  <li>Duplicate the <strong>template.html</strong> file to your own copy</li> 
   <li>Put your name in the placeholder places</li>
   <li>Insert the three main fields for e-mail, name, and phone number. You may want to use a simple, three-row and two-column table to align the field labels and the fields.</li>
-  <li>Be sure to name the recipient field correctly according to the CGI script instructions.</li>
   <li>Create the radio buttons that determine the value for the feedback type.</li>
   <li>Create the check boxes that indicate the response types the customer wants.</li>
   <li>Create the text area field for the feedback message.</li>
-  <li>Create the "Never mind" link back to your journal page.</li>
-  <li>Create the submit button, make sure it has the correct text displayed, and make sure it floats to the right corner of the form. You can use the CSS styling you learned in an earlier assignment. There are examples in the template file.</li>
+  <li>Create the zipcode field</li>
+  <li>Create the "Never mind" link and send it somewhere fun, like www.google.com.</li>
+  <li>Create the submit button, make sure it has the correct text displayed, and make sure it floats to the right corner of the form. </li>
   <li>Verify that your form is working correctly with the CGI script by observing the data displayed by the CGI script.</li>
 </ol>
 
